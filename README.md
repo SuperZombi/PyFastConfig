@@ -4,7 +4,7 @@ Usage example:
 
 <ul>
   <li><a href="#save">Save file</a></li>
-  <li><a href="#load">Save file</a></li>
+  <li><a href="#load">Load file</a></li>
 </ul>
 
 ```Python
