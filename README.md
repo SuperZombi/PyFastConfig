@@ -2,6 +2,8 @@
 Fast creation and reading of files on Python with configurations.
 Usage example:
 
+<a href="#save">Save</a>
+
 ```Python
 import PyFastConfig as fc
 ```
