@@ -47,11 +47,9 @@ fc.save(array, file="config.txt", mode="w", save_types=True, save_names=True)
 ## Load
 Quick load:
 ```Python
-#With copy namespace
-comands = fc.load("config.txt")
 #import values (only if run_mode is not False)
-for i in range(len(comands)):
-  exec(comands[i])
+#With copy namespace
+exec(fc.load("config.txt"))
 ```
 ### Optional options:
 run_mode: default - True <br/> Allows you to run (copy namespace) values from the library and continue working with them in the executable. <br/><br/>
