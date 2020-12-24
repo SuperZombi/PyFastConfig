@@ -3,6 +3,11 @@
 
 <a href="README.md">Read in English</a>
 
+### Установить <a href="https://pypi.org/project/PyFastConfig/">Pypi</a>:
+```
+pip install PyFastConfig
+```
+
 ```Python
 import PyFastConfig as fc
 
