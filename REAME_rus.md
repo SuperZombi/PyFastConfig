@@ -1,3 +1,8 @@
+# PyFastConfig
+Быстрое создание и чтение файлов на Python с конфигурациями.
+
+<a href="REAME.md">Read in English</a>
+
 ```Python
 import PyFastConfig as fc
 
