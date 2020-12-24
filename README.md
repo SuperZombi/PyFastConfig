@@ -1,5 +1,13 @@
 # PyFastConfig
 Fast creation and reading of files on Python with configurations.
+
+### Install <a href="https://pypi.org/project/PyFastConfig/">Pypi</a>:
+```
+pip install PyFastConfig
+```
+
+</br>
+
 Usage example:
 
 <ul>
