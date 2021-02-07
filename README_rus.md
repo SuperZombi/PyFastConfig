@@ -1,7 +1,7 @@
 # PyFastConfig
 Быстрое создание и чтение файлов на Python с конфигурациями.
 
-<a href="README.md">Read in English</a>
+<a href="README.md"><img src="https://emojio.ru/images/twitter-64/1f1fa-1f1f8.png" width="30" height="30"></img>Read in English</a>
 
 ### Установить <a href="https://pypi.org/project/PyFastConfig/">Pypi</a>:
 ```
