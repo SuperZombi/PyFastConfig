@@ -24,20 +24,25 @@ array = [min_t, max_t, arr]
 ```Python
 #Сохранить массив в файл
 fc.save(array)
+
+# или просто:
+# fc.save([любые значения])
 ```
 
 ### Перегрузки: </br>
-Имя - значение - по умолчанию </br>
------------------------------- </br>
-```
-array - массив данных (Обязательно),
-file - имя файла ("config.txt"),
-mode - режимы записи ("w"):
-  "w" - переписать
-  "a" - дописать в конец,
-save_types - Сохранять типы переменных (True),
-save_names - Сохранять имена переменных (True)
-```
+
+<table>
+  <thead>
+  <tr>       <th align="center">Имя</th>       <th align="center">Значение</th>       <th align="center">По умолчанию</th></tr>
+  </thead>
+  
+  <tr><td>   <code>array</code></td>           <td>Массив данных</td>                                                    <td>Обязательно</td></tr>
+  <tr><td>   <code>file</code></td>            <td>Имя файла</td>                                                        <td>"config.txt"</td></tr>
+  <tr><td>   <code>mode</code></td>            <td>Режимы записи:<br/>"w" - переписать<br/>"a" - дописать в конец</td>   <td>"w"</td></tr>
+  <tr><td>   <code>save_types</code></td>      <td>Сохранять типы переменных<br/>(True/False)</td>                       <td>True</td></tr>
+  <tr><td>   <code>save_names</code></td>      <td>Сохранять имена переменных<br/>(True/False)</td>                      <td>True</td></tr>
+</table>
+
 </br></br>
 
 # LOAD
