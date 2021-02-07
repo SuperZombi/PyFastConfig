@@ -72,9 +72,17 @@ Quick load:
 exec(fc.load("config.txt"))
 ```
 ### Optional options:
-run_mode: default - True <br/> Allows you to run (copy namespace) values from the library and continue working with them in the executable. <br/><br/>
-return_only_names: default - False <br/>
-return_only_values: default - False <br/>
+
+<table>
+  <thead>
+  <tr>       <th align="center">Name</th>       <th align="center">Explanation</th>       <th align="center">Default</th></tr>
+  </thead>
+  
+  <tr><td>   <code>run_mode</code></td>            <td>Allows you to run (copy namespace) values<br/>from the library and continue working<br/>with them in the executable.</td>                             <td>True</td></tr>
+  <tr><td>   <code>return_only_names</code></td>             <td>True/False</td>                           <td>False</td></tr>
+  <tr><td>   <code>return_only_values</code></td>             <td>True/False</td>        <td>False</td></tr>
+
+</table>
 
 ```Python
 fc.load(file, run_mode=True, return_only_names=False, return_only_values=False)
