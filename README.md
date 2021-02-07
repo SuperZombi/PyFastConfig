@@ -78,6 +78,7 @@ exec(fc.load("config.txt"))
   <tr>       <th align="center">Name</th>       <th align="center">Explanation</th>       <th align="center">Default</th></tr>
   </thead>
   
+  <tr><td>   <code>file</code></td>             <td>File name</td>                           <td>Required</td></tr>
   <tr><td>   <code>run_mode</code></td>            <td>Allows you to run (copy namespace) values<br/>from the library and continue working<br/>with them in the executable.</td>                             <td>True</td></tr>
   <tr><td>   <code>return_only_names</code></td>             <td>True/False</td>                           <td>False</td></tr>
   <tr><td>   <code>return_only_values</code></td>             <td>True/False</td>        <td>False</td></tr>
