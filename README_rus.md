@@ -72,7 +72,7 @@ print(fc.load("config.txt", run_mode=False))
   </thead>
   
   <tr><td>   <code>file</code></td>            <td>Имя файла</td>                                                        <td>Обязательно</td></tr>
-  <tr><td>   <code>run_mode</code></td>            <td>Режим инициализации:<br/>Присвоить считаным переменным их значения<br/>(Если выключить, то вернет просто массив)</td>   <td>True</td></tr>
+  <tr><td>   <code>run_mode</code></td>            <td>Режим инициализации:<br/>Присвоить считанным переменным их значения<br/>(Если выключить, то вернет просто массив)<br/>(True/False)</td>   <td>True</td></tr>
   <tr><td>   <code>return_only_names</code></td>      <td>Возращает только имена переменных<br/>(True/False)</td>                       <td>False</td></tr>
   <tr><td>   <code>save_names</code></td>      <td>Возращает только значения переменных<br/>(True/False)</td>                      <td>False</td></tr>
 </table>
