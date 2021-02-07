@@ -20,6 +20,7 @@ Usage example:
 ```Python
 import PyFastConfig as fc
 ```
+<br/>
 
 ## Save
 ```Python
