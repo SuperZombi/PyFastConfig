@@ -32,6 +32,9 @@ Quick save:
 ```Python
 array = [min_t, max_t, arr]
 fc.save(array)
+
+# or just
+# fc.save([any values])
 ```
 Result file (Config.txt):
 ```
@@ -42,10 +45,17 @@ arr = list([45, 'hello', 81.5])
 
 ### Optional options:
 
-file: File name can be specified <br/>
-mode: "w" - write, "a" - append <br/>
-save_types: default - True <br/>
-save_names: default - True <br/>
+<table>
+  <thead>
+  <tr>       <th align="center">Name</th>       <th align="center">Accepts values</th>       <th align="center">Default</th></tr>
+  </thead>
+  
+  <tr><td>   <code>array</code></td>            <td>Dataset</td>                             <td>Required</td></tr>
+  <tr><td>   <code>file</code></td>             <td>File name</td>                           <td>"config.txt"</td></tr>
+  <tr><td>   <code>mode</code></td>             <td>"w" - write<br/>"a" - append</td>        <td>"w"</td></tr>
+  <tr><td>   <code>save_types</code></td>       <td>True/False</td>                          <td>True</td></tr>
+  <tr><td>   <code>save_names</code></td>       <td>True/False</td>                          <td>True</td></tr>
+</table>
 
 ```Python
 fc.save(array, file="config.txt", mode="w", save_types=True, save_names=True)
