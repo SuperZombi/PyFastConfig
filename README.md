@@ -1,7 +1,7 @@
 # PyFastConfig
 Fast creation and reading of files on Python with configurations.
 
-<a href="README_rus.md">Читать на Русском</a>
+<a href="README_rus.md"><img src="https://emojio.ru/images/twitter-64/1f1f7-1f1fa.png" width="30" height="30"></img>Читать на Русском</a>
 
 ### Install <a href="https://pypi.org/project/PyFastConfig/">Pypi</a>:
 ```
