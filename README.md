@@ -52,7 +52,7 @@ arr = list([45, 'hello', 81.5])
   
   <tr><td>   <code>array</code></td>            <td>Dataset</td>                             <td>Required</td></tr>
   <tr><td>   <code>file</code></td>             <td>File name</td>                           <td>"config.txt"</td></tr>
-  <tr><td>   <code>mode</code></td>             <td>"w" - write<br/>"a" - append</td>        <td>"w"</td></tr>
+  <tr><td>   <code>mode</code></td>             <td>Write modes:<br/>"w" - rewrite<br/>"a" - append</td>        <td>"w"</td></tr>
   <tr><td>   <code>save_types</code></td>       <td>True/False</td>                          <td>True</td></tr>
   <tr><td>   <code>save_names</code></td>       <td>True/False</td>                          <td>True</td></tr>
 </table>
