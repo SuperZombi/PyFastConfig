@@ -65,11 +65,19 @@ print(fc.load("config.txt", run_mode=False))
 ```
 
 ### Перегрузки: </br>
-Имя - значение - по умолчанию </br>
------------------------------- </br>
-```
-file - имя файла (Обязательно),
-run_mode - Режим инициализации (присвоить считаным переменным их значения) (Если выключить, то вернет просто массив) (True),
-return_only_names - Возращает только имена переменных (False),
-return_only_values - Возращает только значения переменных (False)
+
+<table>
+  <thead>
+  <tr>       <th align="center">Имя</th>       <th align="center">Значение</th>       <th align="center">По умолчанию</th></tr>
+  </thead>
+  
+  <tr><td>   <code>file</code></td>            <td>Имя файла</td>                                                        <td>Обязательно</td></tr>
+  <tr><td>   <code>run_mode</code></td>            <td>Режим инициализации:<br/>Присвоить считаным переменным их значения<br/>(Если выключить, то вернет просто массив)</td>   <td>True</td></tr>
+  <tr><td>   <code>return_only_names</code></td>      <td>Возращает только имена переменных<br/>(True/False)</td>                       <td>False</td></tr>
+  <tr><td>   <code>save_names</code></td>      <td>Возращает только значения переменных<br/>(True/False)</td>                      <td>False</td></tr>
+</table>
+
+
+```Python
+fc.load(file, run_mode=True, return_only_names=False, return_only_values=False)
 ```
