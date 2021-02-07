@@ -43,6 +43,10 @@ fc.save(array)
   <tr><td>   <code>save_names</code></td>      <td>Сохранять имена переменных<br/>(True/False)</td>                      <td>True</td></tr>
 </table>
 
+```Python
+fc.save(array, file="config.txt", mode="w", save_types=True, save_names=True)
+```
+
 </br></br>
 
 # LOAD
