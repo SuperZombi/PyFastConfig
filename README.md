@@ -33,7 +33,7 @@ Quick save:
 array = [min_t, max_t, arr]
 fc.save(array)
 
-# or just
+# or just:
 # fc.save([any values])
 ```
 Result file (Config.txt):
