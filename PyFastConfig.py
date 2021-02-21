@@ -8,7 +8,13 @@ def save(array, file="config.txt", mode="w", save_types=True, save_names=True):
 			F += str(name[0]) + " = "
 		if save_types == True:
 			_type = type(array[i]).__name__
-			F += str(_type) + "(" + str(array[i]) + ")\n"
+			F += str(_type) + "("
+			if _type == "str":
+				F += "'"
+			F += str(array[i])
+			if _type == "str":
+				F += "'"
+			F += ")\n"
 		if save_types == False:
 			F += str(array[i]) + "\n"
 
