@@ -96,3 +96,21 @@ If you changed the parameters for saving additional information (save_types and 
 #Returns an array (use if you have disabled any of the following options: save_types or save_names)
 print(fc.load("config.txt", run_mode=False))
 ```
+
+<br/>
+
+### Errors:
+
+If you are reading a file in a function and you can't get objects: please try this:
+```
+names = fc.load("config.txt", return_only_names=True)
+fc.load("config.txt")
+for i in range(len(names)):
+  globals()[names[i]] = eval("fc."+names[i])
+```
+
+Or this if you know the name of the variable in advance:
+```
+fc.load("config.txt")
+name = fc.name
+```
