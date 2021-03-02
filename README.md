@@ -101,7 +101,7 @@ print(fc.load("config.txt", run_mode=False))
 
 ### Errors:
 
-If you are reading a file in a function and you can't get objects: please try this:
+If you are reading a file in a function and you can't get objects, please try this:
 ```
 names = fc.load("config.txt", return_only_names=True)
 fc.load("config.txt")
