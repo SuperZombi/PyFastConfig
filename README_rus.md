@@ -87,15 +87,17 @@ fc.load(file, run_mode=True, return_only_names=False, return_only_values=False)
 ### Ошибки:
 
 Если вы читаете файл в функции и не можете получить объекты - попробуйте это:
-```
-names = fc.load("config.txt", return_only_names=True)
-fc.load("config.txt")
-for i in range(len(names)):
-  globals()[names[i]] = eval("fc."+names[i])
+```Python
+def func():
+  names = fc.load("config.txt", return_only_names=True)
+  fc.load("config.txt")
+  for i in range(len(names)):
+    globals()[names[i]] = eval("fc."+names[i])
 ```
 
 Или это, если вы заранее знаете имя переменной:
-```
-fc.load("config.txt")
-name = fc.name
+```Python
+def func():
+  fc.load("config.txt")
+  name = fc.name
 ```
