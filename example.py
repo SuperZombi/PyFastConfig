@@ -12,11 +12,9 @@ print(max_t)
 print(arr)
 
 
-'''
+
 def func():
       exec(fc.load("my_file_name.txt", function_mode=True))
       
       print(min_t)
       print(max_t)
-      print(arr)
-'''
