@@ -20,7 +20,7 @@ arr = [45, 'hello', 81.5]
 
 # SAVE
 ```Python
-#Сохранить массив в файл
+#Сохранить в файл
 fc.save(min_t, max_t, arr)
 ```
 
