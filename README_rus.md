@@ -15,18 +15,13 @@ import PyFastConfig as fc
 min_t = 25
 max_t = 35
 arr = [45, 'hello', 81.5]
-#Записать их для удобства в массив
-array = [min_t, max_t, arr]
 ```
 </br>
 
 # SAVE
 ```Python
 #Сохранить массив в файл
-fc.save(array)
-
-# или просто:
-# fc.save([любые значения])
+fc.save(min_t, max_t, arr)
 ```
 
 ### Перегрузки: </br>
@@ -36,7 +31,7 @@ fc.save(array)
   <tr>       <th align="center">Имя</th>       <th align="center">Значение</th>       <th align="center">По умолчанию</th></tr>
   </thead>
   
-  <tr><td>   <code>array</code></td>           <td>Массив данных</td>                                                    <td>Обязательно</td></tr>
+  <tr><td>   <code>*args</code></td>           <td>Переменные</td>                                                       <td>Обязательно</td></tr>
   <tr><td>   <code>file</code></td>            <td>Имя файла</td>                                                        <td>"config.txt"</td></tr>
   <tr><td>   <code>mode</code></td>            <td>Режимы записи:<br/>"w" - переписать<br/>"a" - дописать в конец</td>   <td>"w"</td></tr>
   <tr><td>   <code>save_types</code></td>      <td>Сохранять типы переменных<br/>(True/False)</td>                       <td>True</td></tr>
@@ -44,7 +39,7 @@ fc.save(array)
 </table>
 
 ```Python
-fc.save(array, file="config.txt", mode="w", save_types=True, save_names=True)
+fc.save(*args, file="config.txt", mode="w", save_types=True, save_names=True)
 ```
 
 </br></br>
@@ -63,6 +58,11 @@ print(fc.load("config.txt", return_only_values=True))
 #Показать прочитаный массив
 print(fc.load("config.txt", run_mode=False))
 ```
+Чтение внутри функции:
+```Python
+def func():
+    exec(fc.load("config.txt", function_mode=True))
+```
 
 ### Перегрузки: </br>
 
@@ -73,31 +73,12 @@ print(fc.load("config.txt", run_mode=False))
   
   <tr><td>   <code>file</code></td>                  <td>Имя файла</td>                                                    <td>Обязательно</td></tr>
   <tr><td>   <code>run_mode</code></td>              <td>Режим инициализации:<br/>Присвоить считанным переменным их значения<br/>(Если выключить, то вернет просто массив)<br/>(True/False)</td>   <td>True</td></tr>
+  <tr><td>   <code>function_mode</code></td>    <td>Тоже самое, что и <code>run_mode</code>, но выполняется внутри функции.</td>   <td>False</td></tr>
   <tr><td>   <code>return_only_names</code></td>     <td>Возращает только имена переменных<br/>(True/False)</td>           <td>False</td></tr>
   <tr><td>   <code>save_names</code></td>            <td>Возращает только значения переменных<br/>(True/False)</td>        <td>False</td></tr>
 </table>
 
 
 ```Python
-fc.load(file, run_mode=True, return_only_names=False, return_only_values=False)
-```
-
-<br/>
-
-### Ошибки:
-
-Если вы читаете файл в функции и не можете получить объекты - попробуйте это:
-```Python
-def func():
-  names = fc.load("config.txt", return_only_names=True)
-  fc.load("config.txt")
-  for i in range(len(names)):
-    globals()[names[i]] = eval("fc."+names[i])
-```
-
-Или это, если вы заранее знаете имя переменной:
-```Python
-def func():
-  fc.load("config.txt")
-  name = fc.name
+fc.load(file, run_mode=True, function_mode=False, return_only_names=False, return_only_values=False)
 ```
