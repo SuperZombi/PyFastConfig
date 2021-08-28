@@ -1,48 +1,57 @@
 import inspect
 
-def save(array, file="config.txt", mode="w", save_types=True, save_names=True):
+def save(*array, file="config.txt", mode="w", save_types=True, save_names=True):
 	F = ""
-	for i in range(len(array)):
-		if save_names == True:
-			name = [name for name, value in inspect.currentframe().f_back.f_locals.items() if array[i] is value]
+	for i in array:
+		if save_names:
+			name = [name for name, value in inspect.currentframe().f_back.f_locals.items() if i is value]
 			F += str(name[0]) + " = "
-		if save_types == True:
-			_type = type(array[i]).__name__
+		if save_types:
+			_type = type(i).__name__
 			F += str(_type) + "("
-			if _type == "str":
+			if isinstance(_type, str):
 				F += "'"
-			F += str(array[i])
-			if _type == "str":
+			F += str(i)
+			if isinstance(_type, str):
 				F += "'"
 			F += ")\n"
-		if save_types == False:
-			F += str(array[i]) + "\n"
+		if not save_types:
+			F += str(i) + "\n"
 
 	with open(file, mode) as _file:
 		_file.write(F)
 	_file.close()
 
 
-def load(file, run_mode=True, return_only_names=False, return_only_values=False):
+def load(file, run_mode=True, function_mode=False, return_only_names=False, return_only_values=False):
 	with open(file, 'r') as _file:
 		lines = [x.strip('\n') for x in _file.readlines()]
 	_file.close()
 
-	if return_only_names == True:
+	if return_only_names:
 		names = []
-		for i in range(len(lines)):
-			string = lines[i].split(' = ')
+		for i in lines:
+			string = i.split(' = ')
 			names.append(string[0])
 		return names
 
-	if return_only_values == True:
+	if return_only_values:
 		values = []
-		for i in range(len(lines)):
-			string = lines[i].split(' = ')
+		for i in lines:
+			string = i.split(' = ')
 			values.append(string[1])
 		return values
 
-	if run_mode == True:
+	if function_mode:
+		comand = ""
+		for i in lines:
+			string = i.split(' = ')
+			globals()[string[0]] = eval(string[1])
+			comand += f'globals()["{str(string[0])}"] = fc.{str(string[0])}'
+			comand += "\n"
+		return comand
+
+	if run_mode:
 		comand = "from PyFastConfig import "
 		for i in range(len(lines)):
 			string = lines[i].split(' = ')
